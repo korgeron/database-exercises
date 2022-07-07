@@ -11,12 +11,3 @@ CREATE TABLE albums (
     genre VARCHAR(100),
     PRIMARY KEY(id)
 );
-
-
--- ADDING VALUES TO CODEUP_TEST_DB
--- INSERT INTO albums(
---     artist, name, genre
--- )
--- VALUES('the artist', 'the man kevin', 'ya boy ya kna!'),
---         ('new artist', 'not kevin', 'not ya boy you know and love'),
---        ('old artist', 'kevs the name', 'being back is the game');
