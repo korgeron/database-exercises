@@ -26,7 +26,7 @@ order by year(birth_date), year(hire_date) desc;
 # TODO: ALL EMPLOYEES HIRED IN 90S / BORN ON CHRISTMAS CALCULATED TIME WORKED AT COMPANY
 select
        concat(first_name, ' ', last_name) as full_name,
-       datediff(curdate(), hire_date) as time_worked,
+       concat(datediff(curdate(), hire_date), ' days') as time_worked,
        hire_date,
        curdate() as date_now
 from employees
