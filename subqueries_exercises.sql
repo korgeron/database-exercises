@@ -34,3 +34,28 @@ where gender = 'F' and emp_no in (
     from dept_manager as dm
     where dm.emp_no = e.emp_no and dm.to_date > curdate()
     );
+
+# TODO: BONUS 1
+select dept_name
+from departments
+where dept_no in (
+    select dept_no
+    from dept_manager as dm
+    where emp_no in (
+        select emp_no
+        from employees as e
+        where gender = 'F' and dm.emp_no = e.emp_no and dm.to_date > curdate()
+        )
+    );
+
+# TODO: BONUS 2
+select concat(e.first_name, ' ', e.last_name) as Employee
+from employees as e
+where emp_no in (
+    select emp_no
+    from salaries
+    where salary in (
+        select max(salary)
+        from salaries
+        )
+    );
