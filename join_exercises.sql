@@ -60,3 +60,6 @@ join dept_manager as dm on d.dept_no = dm.dept_no
 join employees as e2 on e2.emp_no = dm.emp_no
 where year(de.to_date) = 9999 and year(dm.to_date) = 9999
 order by d.dept_name, e.emp_no;
+
+
+
